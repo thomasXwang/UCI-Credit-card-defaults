@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="pay_amt2 <= 4973.0\nentropy = 0.762\nsamples = 24000\nvalue = [18691, 5309]\nclass = no-default", fillcolor="#eca571"] ;
+1 [label="pay_amt6 <= 900.5\nentropy = 0.815\nsamples = 17578\nvalue = [13146, 4432]\nclass = no-default", fillcolor="#eeab7c"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+3 [label="pay_2 <= 0.5\nentropy = 0.865\nsamples = 8090\nvalue = [5765, 2325]\nclass = no-default", fillcolor="#efb489"] ;
+1 -> 3 ;
+7 [label="entropy = 0.765\nsamples = 6649\nvalue = [5168, 1481]\nclass = no-default", fillcolor="#eca572"] ;
+3 -> 7 ;
+8 [label="entropy = 0.979\nsamples = 1441\nvalue = [597, 844]\nclass = default", fillcolor="#c5e2f7"] ;
+3 -> 8 ;
+4 [label="pay_3 <= 0.5\nentropy = 0.764\nsamples = 9488\nvalue = [7381, 2107]\nclass = no-default", fillcolor="#eca572"] ;
+1 -> 4 ;
+5 [label="entropy = 0.644\nsamples = 7904\nvalue = [6607, 1297]\nclass = no-default", fillcolor="#ea9a60"] ;
+4 -> 5 ;
+6 [label="entropy = 1.0\nsamples = 1584\nvalue = [774, 810]\nclass = default", fillcolor="#f6fbfe"] ;
+4 -> 6 ;
+2 [label="entropy = 0.575\nsamples = 6422\nvalue = [5545, 877]\nclass = no-default", fillcolor="#e99558"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
