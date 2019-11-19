@@ -3,12 +3,14 @@ from pathlib import Path
 
 
 def load_raw_data(path):
+    """Returns the raw CSV data from path (in the same folder as the notebook) as a pandas DataFrame"""
     root = Path('.')
     df = pd.read_csv(root / path)
     return df
 
 
 def load_data(path):
+    """Returns the CSV data from path (in the same folder as the notebook) as a (X,y) couple usable for training"""
     df = load_raw_data(path)
 
     # Dropping ID column
@@ -43,4 +45,4 @@ def load_data(path):
     X = df.drop(['default'], axis=1)
     y = df[['default']]
 
-    return (X, y)
+    return X, y
