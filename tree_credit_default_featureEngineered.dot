@@ -1,21 +1,21 @@
 digraph Tree {
 node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
 edge [fontname=helvetica] ;
-0 [label="pay_1 <= 0.5\nentropy = 0.762\nsamples = 18000\nvalue = [14018, 3982]\nclass = no-default", fillcolor="#eca571"] ;
-1 [label="pay_amt2 <= 1605.5\nentropy = 0.573\nsamples = 13846\nvalue = [11966, 1880]\nclass = no-default", fillcolor="#e99558"] ;
+0 [label="pay_1 <= 0.5\nentropy = 1.0\nsamples = 18000\nvalue = [9000.0, 9000.0]\nclass = no-default", fillcolor="#ffffff"] ;
+1 [label="pay_amt2 <= 1610.5\nentropy = 0.939\nsamples = 13846\nvalue = [7682.551, 4249.121]\nclass = no-default", fillcolor="#f3c7a7"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
-5 [label="entropy = 0.695\nsamples = 4996\nvalue = [4061, 935]\nclass = no-default", fillcolor="#eb9e67"] ;
+5 [label="entropy = 0.992\nsamples = 5010\nvalue = [2614.995, 2117.78]\nclass = no-default", fillcolor="#fae7d9"] ;
 1 -> 5 ;
-6 [label="pay_4 <= 0.5\nentropy = 0.49\nsamples = 8850\nvalue = [7905, 945]\nclass = no-default", fillcolor="#e89051"] ;
+6 [label="pay_4 <= 0.5\nentropy = 0.876\nsamples = 8836\nvalue = [5067.556, 2131.341]\nclass = no-default", fillcolor="#f0b68c"] ;
 1 -> 6 ;
-7 [label="entropy = 0.463\nsamples = 8346\nvalue = [7527, 819]\nclass = no-default", fillcolor="#e88f4f"] ;
+7 [label="entropy = 0.851\nsamples = 8332\nvalue = [4824.868, 1846.56]\nclass = no-default", fillcolor="#efb185"] ;
 6 -> 7 ;
-8 [label="entropy = 0.811\nsamples = 504\nvalue = [378, 126]\nclass = no-default", fillcolor="#eeab7b"] ;
+8 [label="entropy = 0.995\nsamples = 504\nvalue = [242.688, 284.782]\nclass = default", fillcolor="#e2f1fb"] ;
 6 -> 8 ;
-2 [label="pred_bill_amt0 <= 975.47\nentropy = 1.0\nsamples = 4154\nvalue = [2052, 2102]\nclass = default", fillcolor="#fafdfe"] ;
+2 [label="pred_bill_amt0 <= 975.47\nentropy = 0.755\nsamples = 4154\nvalue = [1317.449, 4750.879]\nclass = default", fillcolor="#70b8ec"] ;
 0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
-3 [label="entropy = 0.868\nsamples = 1172\nvalue = [833, 339]\nclass = no-default", fillcolor="#f0b48a"] ;
+3 [label="entropy = 0.977\nsamples = 1172\nvalue = [534.812, 766.198]\nclass = default", fillcolor="#c3e1f7"] ;
 2 -> 3 ;
-4 [label="entropy = 0.976\nsamples = 2982\nvalue = [1219, 1763]\nclass = default", fillcolor="#c2e1f7"] ;
+4 [label="entropy = 0.644\nsamples = 2982\nvalue = [782.637, 3984.681]\nclass = default", fillcolor="#60b0ea"] ;
 2 -> 4 ;
 }
