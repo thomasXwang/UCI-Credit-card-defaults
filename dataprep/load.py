@@ -10,7 +10,7 @@ def load_raw_data(path):
 
 
 def load_data(path):
-    """Returns the CSV data from path (in the same folder as the notebook) as a (X,y) couple usable for training"""
+    """Returns the CSV data from path (in the same folder as the notebook) as a cleaned unique DF"""
     df = load_raw_data(path)
 
     # Dropping ID column
@@ -41,8 +41,20 @@ def load_data(path):
     # Cleaning our mislabelled education data
     df.loc[df['marriage'].isin([0, 3, 4]), 'marriage'] = 3
 
+    return df
+
+
+def df2xy(df, column_name):
+    """Returns (X,y) couple from a DataFrame"""
     # Defining our (X, y)
-    X = df.drop(['default'], axis=1)
-    y = df[['default']]
+    X = df.drop([column_name], axis=1)
+    y = df[[column_name]]
 
     return X, y
+
+
+def load_data_xy(path):
+    """Returns the CSV data from path (in the same folder as the notebook) as a (X,y) couple usable for training"""
+    df = load_data(path)
+
+    return df2xy(df, 'default')

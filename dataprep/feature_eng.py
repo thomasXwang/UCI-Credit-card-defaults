@@ -15,10 +15,15 @@ def bin_age(df):
     return df
 
 
-def gender_marriage(df):
+def gender_x_marriage(df):
     """Returns df with a cross-categorical column gender x marriage"""
+    df['gen_mar'] = 0
+    df = df.assign(gen_mar=list((zip(df.gender, df.marriage))))
+    return df
 
 
-
-
-    return None
+def gender_x_agebin(df):
+    """Returns df with a cross-categorical column gender x ageBin"""
+    df['gen_ageBin'] = 0
+    df = df.assign(gen_ageBin=list(zip(df.gender, df.age_bin)))
+    return df
